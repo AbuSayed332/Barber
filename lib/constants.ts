@@ -4,3 +4,5 @@ export const APP_SLOGAN =
 export const APP_DESCRIPTION =
   process.env.NEXT_PUBLIC_APP_DESCRIPTION ||
   'Barber Shop is a platform that allows you to book appointments with barbers and hair stylists.'
+
+  export const PAGE_SIZE = Number(process.env.PAGE_SIZE || 9)
