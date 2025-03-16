@@ -1,0 +1,6 @@
+export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || 'Barber Shop'
+export const APP_SLOGAN =
+  process.env.NEXT_PUBLIC_APP_SLOGAN || 'Spend less, enjoy more.'
+export const APP_DESCRIPTION =
+  process.env.NEXT_PUBLIC_APP_DESCRIPTION ||
+  'Barber Shop is a platform that allows you to book appointments with barbers and hair stylists.'
