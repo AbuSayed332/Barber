@@ -115,20 +115,7 @@ export default async function ProductDetails(props: {
                 )}
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className='mt-10'>
-        <ProductSlider
-          products={relatedProducts.data}
-          title={`Best Sellers in ${product.category}`}
-        />
-      </section>
-      <section>
-  <BrowsingHistoryList className='mt-10' />
-</section>
-{product.countInStock !== 0 && (
+            {product.countInStock !== 0 && (
                     <div className='flex justify-center items-center'>
                       <AddToCart
                         item={{
@@ -147,6 +134,20 @@ export default async function ProductDetails(props: {
                       />
                     </div>
                   )}
+          </div>
+        </div>
+      </section>
+
+      <section className='mt-10'>
+        <ProductSlider
+          products={relatedProducts.data}
+          title={`Best Sellers in ${product.category}`}
+        />
+      </section>
+      <section>
+  <BrowsingHistoryList className='mt-10' />
+</section>
+
     </div>
   )
 }

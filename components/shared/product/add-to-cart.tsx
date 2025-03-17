@@ -24,7 +24,6 @@ export default function AddToCart({
 }) {
   const router = useRouter()
   const { toast } = useToast()
-  
 
   const { addItem } = useCartStore()
 
@@ -35,19 +34,25 @@ export default function AddToCart({
       className='rounded-full w-auto'
       onClick={() => {
         try {
-          addItem(item, quantity);
+          addItem(item, 1)
           toast({
             description: 'Added to Cart',
-          });
-        } catch (error: unknown) {
-          if (error instanceof Error) {
-            toast({
-              variant: 'destructive',
-              description: error.message,
-            });
-          }
+            action: (
+              <Button
+                onClick={() => {
+                  router.push('/cart')
+                }}
+              >
+                Go to Cart
+              </Button>
+            ),
+          })
+        } catch (error: any) {
+          toast({
+            variant: 'destructive',
+            description: error.message,
+          })
         }
-        
       }}
     >
       Add to Cart
