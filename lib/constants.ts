@@ -6,3 +6,7 @@ export const APP_DESCRIPTION =
   'Barber Shop is a platform that allows you to book appointments with barbers and hair stylists.'
 
   export const PAGE_SIZE = Number(process.env.PAGE_SIZE || 9)
+
+  export const FREE_SHIPPING_MIN_PRICE = Number(
+    process.env.FREE_SHIPPING_MIN_PRICE || 35
+  )
