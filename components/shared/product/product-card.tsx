@@ -15,6 +15,7 @@ const ProductCard = ({
   product,
   hideBorder = false,
   hideDetails = false,
+  
 }: {
   product: IProduct
   hideDetails?: boolean
