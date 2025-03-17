@@ -112,6 +112,9 @@ const ProductCard = ({
           <CardContent className='p-3 flex-1  text-center'>
             <ProductDetails />
           </CardContent>
+          <div className='p-3'>
+            <AddButton />
+          </div>
         </>
       )}
     </Card>
