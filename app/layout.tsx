@@ -1,3 +1,4 @@
+import ClientProviders from '@/components/shared/client-providers';
 import { APP_DESCRIPTION, APP_NAME, APP_SLOGAN } from '@/lib/constants'
 import { Metadata } from 'next'
 
@@ -11,7 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <ClientProviders>{children}</ClientProviders>
+      </body>
     </html>
   );
 }
